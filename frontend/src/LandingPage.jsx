@@ -13,9 +13,9 @@ const LandingPage = () => {
         <Skills />
       </section>
 
-      <section id="cv">
+      {/*<section id="cv">
         <Cv />
-      </section>
+      </section>*/}
       
     </div>
   )

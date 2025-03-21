@@ -1,24 +1,46 @@
+import { motion } from 'framer-motion'
 import { Github, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroImg from "../assets/hero.webp"
 
 const Hero = () => {
+  const name = "Orevaoghene"
+  
   return (
     <div className="hero">
       <div className="intro">
-        <h1 className="greet">Hi, I am Orevaoghene</h1>
+        <h1 className="greet">
+          Hi, I am{" "}
+          <motion.span className="">
+            {Array.from(name).map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.span>
+        </h1>
         <h2>Full-Stack Developer</h2>
         <p>
           I love turning ideas into reality by building dynamic and user-friendly
-          applications. From crafting seamless user interfaces to designing
-          efficient backend systems, I focus on creating meaningful digital experiences.
+          applications.
         </p>
 
-        <Link to="/contact" className="btn">
-          Contact Me
-          <div className="arrow-container">
-            <ArrowRight className="text-green-500 bg-white rounded-full ml-2" size={15} />
-          </div>
+        <Link to="/contact" className="">
+          <motion.div
+            className="btn transition"
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          >
+            Contact Me
+            <div className="arrow-container">
+              <ArrowRight className="text-green-500 bg-white rounded-full ml-2" size={15} />
+            </div>
+          </motion.div>
         </Link>
       </div>
       
