@@ -18,13 +18,13 @@ const Skills = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
-    }, 3000); // Rotate every 3 seconds
+    }, 2000); // Rotate every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row md:gap-35 justify-center items-center w-[90vw] mb-15">
+    <div className="flex flex-col md:flex-row md:gap-35 justify-center items-center w-[95vw] mb-15">
       <h3 className="text-2xl md:text-3xl mt-15 md:mt-0 font-bold mb-10 md:mb-0">
         Skills
       </h3>

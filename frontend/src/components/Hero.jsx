@@ -17,7 +17,7 @@ const Hero = () => {
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.3 }}
               >
                 {char}
               </motion.span>
@@ -33,7 +33,7 @@ const Hero = () => {
         <Link to="/contact" className="">
           <motion.div
             className="btn transition"
-            animate={{ scale: [1, 1.1, 1] }}
+            animate={{ scale: [0.8, 1.1, 1] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
           >
             Contact Me
