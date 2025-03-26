@@ -50,7 +50,7 @@ const EducationPage = () => {
               </div>
 
               {/* Content */}
-              <div className="ml-6 md:w-2/3 w-[70]">
+              <div className="ml-6 md:w-2/3 w-[100vw]">
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
                   {edu.institution}
                 </h3>
