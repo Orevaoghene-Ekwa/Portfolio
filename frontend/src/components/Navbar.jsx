@@ -26,7 +26,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className={`menuDrop ${isOpen ? (blur ? 'top-16 backdrop-blur-md': 'top-16') : 'top-[-100%]'}`}>
+        <div className={`menuDrop ${isOpen ? (blur ? 'fixed z-50 top-16 backdrop-blur-md inset-0': 'top-16') : 'top-[-100%]'}`}>
           <ul className="menu">
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
             <li><Link to="/projects" onClick={toggleMenu}>Projects</Link></li>
