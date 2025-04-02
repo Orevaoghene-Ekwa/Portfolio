@@ -2,12 +2,21 @@ import { Link } from "react-router-dom";
 import { Github, ExternalLink } from "lucide-react";
 import JobDasher from "./assets/job-dasher.png";
 import QuizApp from "./assets/quiz-app.png";
+import Portfolio from "./assets/portfolio.png";
 
 const projects = [
   {
+    title: "Portfolio",
+    description: "My portfolio website. Yes, this very website you're on 🙃! It showcases my skills, projects, and experiences.",
+    techStack: ["React", "Tailwindcss", "framer", "Vercel"],
+    image: Portfolio,
+    github: "https://github.com/Orevaoghene-Ekwa/Portfolio",
+    liveDemo: "https://orevaoghene-ekwa.vercel.app/",
+  },
+  {
     title: "Job Dasher",
     description: "A Job Management Board for job seekers looking to looking to find a job according to their skills and preferences.",
-    techStack: ["React", "Flask", "Sqlite", "Bootstrap"],
+    techStack: ["React", "Flask", "Sqlite", "Bootstrap", "Render"],
     image: JobDasher,
     github: "https://github.com/Orevaoghene-Ekwa/Job-Dasher",
     liveDemo: "https://job-dasher.onrender.com/",
@@ -18,15 +27,7 @@ const projects = [
     techStack: ["React", "Express.js", "SQLite", "Tailwind Css"],
     image: QuizApp,
     github: "https://github.com/Orevaoghene-Ekwa/Quiz-App",
-    liveDemo: "https://quizmaster.com",
-  },
-  {
-    title: "QR Code Generator",
-    description: "A simple web app to generate QR codes for links, text, and contact details using Python.",
-    techStack: ["Flask", "Bootstrap", "qrcode Module"],
-    image: "/images/qr-code.png",
-    github: "https://github.com/yourusername/qr-code-generator",
-    liveDemo: "https://qrgenerator.com",
+    liveDemo: "#",
   },
 ];
 
@@ -40,7 +41,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 px-5">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-200 rounded-3xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+            <div key={index} className="bg-green-100 rounded-3xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <img src={project.image} alt={project.title} className="w-full h-50 object-cover" />
               
               <div className="p-6">
