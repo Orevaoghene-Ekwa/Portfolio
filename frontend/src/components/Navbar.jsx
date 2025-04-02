@@ -18,7 +18,7 @@ const Navbar = () => {
           Oreva<span>oghene</span>
         </Link>
 
-        <div className="md:hidden">
+        <div className="absolute right-[0] md:hidden mr-4">
           {isOpen ? (
             <X onClick={() => {toggleMenu(), setBlur(false)}} className="cursor-pointer" size={28} />
           ) : (
